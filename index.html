@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pose Estimation</title>
+</head>
+<body>
+    <h1>Upload a Video for Pose Estimation</h1>
+    <form method="POST" enctype="multipart/form-data" action="/process">
+        <input type="file" name="file" accept=".mp4">
+        <input type="submit" value="Process Video">
+    </form>
+    <div>
+        <h2>Pose Estimation Output</h2>
+        <img src="{{ url_for('video_feed') }}" alt="Pose Estimation">
+    </div>
+</body>
+</html>
